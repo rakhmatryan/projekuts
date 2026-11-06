@@ -1,9 +1,10 @@
 import { getProjects, deleteProject } from '@/modules/projects/actions'
 import { Project } from '@prisma/client'
 import Link from 'next/link'
-import { Suspense } from 'react' // <-- 1. Import Suspense
+import { Suspense } from 'react' // 1. Import Suspense
 
 export const dynamic = 'force-dynamic'
+export const instant = false // 2. Tambahkan ini sesuai anjuran Next.js 16+
 
 export default async function AdminProjectsPage() {
   const projects = await getProjects()
@@ -17,8 +18,8 @@ export default async function AdminProjectsPage() {
         </Link>
       </div>
       
-      {/* 2. Bungkus bagian yang memuat data dinamis dengan Suspense */}
-      <Suspense fallback={<p>Memuat data...</p>}>
+      {/* 3. Bungkus bagian tabel dengan Suspense */}
+      <Suspense fallback={<div className="p-8 text-center text-gray-500">Memuat data project...</div>}>
         <div className="bg-white border rounded-xl overflow-hidden shadow-sm">
           <table className="w-full text-left">
             <thead className="bg-gray-50 border-b">
