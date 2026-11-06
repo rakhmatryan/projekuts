@@ -1,7 +1,8 @@
 import Link from "next/link"
 
 export const dynamic = 'force-dynamic'
-export const fetchCache = 'default-no-store'
+export const dynamicParams = true
+export const fetchCache = 'force-no-store'
 
 export default function AdminLayout({
   children,
