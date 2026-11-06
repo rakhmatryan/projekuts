@@ -2,9 +2,6 @@ import { getProjects, deleteProject } from '@/modules/projects/actions'
 import { createProject } from '@/modules/projects/actions'
 import Link from 'next/link'
 
-export const dynamic = 'force-dynamic'
-export const instant = false
-
 export default function NewProjectPage() {
   return (
     <div className="p-8 max-w-3xl">
