@@ -3,6 +3,9 @@ import { prisma } from '@/lib/prisma'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 
+export const dynamic = 'force-dynamic' // Mencegah Next.js membuat halaman statis
+export const instant = false // Aturan baru Next.js
+
 export default async function EditProjectPage({ params }: { params: { id: string } }) {
   // Ambil data project yang sudah ada berdasarkan ID
   const project = await prisma.project.findUnique({

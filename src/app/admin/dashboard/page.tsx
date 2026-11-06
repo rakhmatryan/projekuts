@@ -1,6 +1,9 @@
 import { getServerSession } from "next-auth/next"
 import { redirect } from "next/navigation"
 
+export const dynamic = 'force-dynamic' // Mencegah Next.js membuat halaman statis
+export const instant = false // Aturan baru Next.js
+
 export default async function DashboardPage() {
   // Mengecek sesi user di sisi server
   const session = await getServerSession()

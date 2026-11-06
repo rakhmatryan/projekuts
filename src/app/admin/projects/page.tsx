@@ -2,6 +2,9 @@ import { getProjects, deleteProject } from '@/modules/projects/actions'
 import { Project } from '@prisma/client'
 import Link from 'next/link'
 
+export const dynamic = 'force-dynamic' // Mencegah Next.js membuat halaman statis
+export const instant = false // Aturan baru Next.js
+
 export default async function AdminProjectsPage() {
   const projects = await getProjects()
 
