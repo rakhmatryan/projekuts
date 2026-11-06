@@ -2,6 +2,9 @@ import { getProjectBySlug } from '@/modules/projects/actions'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 
+export const dynamic = 'force-dynamic'
+export const instant = false
+
 export default async function ProjectDetailPage({ params }: { params: { slug: string } }) {
   // Mengambil data berdasarkan URL slug
   const project = await getProjectBySlug(params.slug)
