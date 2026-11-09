@@ -3,16 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start",
-  "lint": "next lint",
-  "postinstall": "prisma generate"
-},
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postinstall": "prisma generate"
+  },
   "dependencies": {
     "@prisma/client": "5.22.0",
     "@supabase/ssr": "^0.12.7",
     "@supabase/supabase-js": "^2.119.0",
+    "@tailwindcss/postcss": "^4.3.5",
     "bcryptjs": "^3.0.3",
     "next": "16.4.5",
     "next-auth": "^4.24.15",
@@ -29,7 +30,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.4.5",
     "prisma": "5.22.0",
-    "tailwindcss": "^4",
+    "tailwindcss": "^4.3.5",
     "typescript": "^5"
   },
   "prisma": {
